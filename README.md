@@ -22,7 +22,8 @@ This repo provides the PyTorch source code of our paper: HERALD: An Annotation E
 We propose HERALD, an annotation efficient framework that reframes the training data annotation process as a denoising problem.
 Specifically, instead of manually labeling training samples, we first use a set of labeling heuristics to automatically label training samples. We then denoise the weakly labeled data using Shapley algorithm. Finally, we use the denoised data to train a user engagement detector. 
 Our experiments show that HERALD improves annotation efficiency significantly and 
-achieves 86\% user disengagement detection accuracy in two dialog corpora.*
+achieves 86\% user disengagement detection accuracy in two dialog corpora.
+Our implementation is available at https://github.com/Weixin-Liang/HERALD/*
 
 
 <p align='center'>
@@ -74,9 +75,40 @@ To obtain a closed-form solution of Shapley value, we extract the features of tr
 </p>
 
 Please check [shapley/shapley.py](shapley/shapley.py) for the implementation of the shapley algorithm. Note that you need to first extract the features for training datapoints before running the K-nearest-neighbour based Shapley algorithm. 
+In particular, the [core function](shapley/shapley.py#L63-L72) for calculating the single point data shapley value is: 
+```python
+def single_point_shapley(xt_query, y_tdev_label):
+    distance1 = np.sum(np.square(X-xt_query), axis=1)
+    alpha = np.argsort(distance1)
+    shapley_arr = np.zeros(N)
+    for i in range(N-1, -1, -1): 
+        if i == N-1:
+            shapley_arr[alpha[i]] = int(y[alpha[i]] == y_tdev_label) /N
+        else:
+            shapley_arr[alpha[i]] = shapley_arr[alpha[i+1]] + \
+              ( int(y[alpha[i]]==y_tdev_label) - int(y[alpha[i+1]]==y_tdev_label) )/K * min(K,i+1)/(i+1)
+    return shapley_arr
+```
+Here we use (i+1) since i starts from zero in our python implementaion. 
+
 
 
 ## Related Papers on Data Shapley
-[Beyond User Self-Reported Likert Scale Ratings: A Comparison Model for Automatic Dialog Evaluation](https://www.aclweb.org/anthology/2020.acl-main.126/) (ACL 2020). Weixin Liang, James Zou and Zhou Yu. 
+[Beyond User Self-Reported Likert Scale Ratings: A Comparison Model for Automatic Dialog Evaluation](https://www.aclweb.org/anthology/2020.acl-main.126/) (ACL 2020). 
+Weixin Liang, James Zou and Zhou Yu. 
+[[PDF]](https://www.aclweb.org/anthology/2020.acl-main.126.pdf)
+[[Video]](https://slideslive.com/38928690/beyond-user-selfreported-likert-scale-ratings-a-comparison-model-for-automatic-dialog-evaluation)
+[[Stanford AI Lab Blog]](https://ai.stanford.edu/blog/acl-2020/)
+[[Slides]](https://drive.google.com/file/d/1hpuUCyz81bqtg1-De9C1ostgiJA519Vj/view?usp=sharing)
+[[Code]](https://github.com/Weixin-Liang/dialog_evaluation_CMADE/)
+
 
 [Data Shapley: Equitable Data Valuation for Machine Learning. ](https://arxiv.org/abs/1904.02868) (ICML 2019). Amirata Ghorbani, James Zou. 
+[[PDF]](http://proceedings.mlr.press/v97/ghorbani19c/ghorbani19c.pdf)
+[[Video]](https://slideslive.com/38917630/supervised-learning)
+[[Poster]](https://drive.google.com/file/d/19iX2faH2Y0SE5Yn_yCmOaKAUvp57oB6y/view)
+[[Slides]](https://docs.google.com/presentation/d/10Crejw-CgyS0G_16KC8cHcnoVPdDsibfFmmiHbN22Ek/edit)
+[[Code]](https://github.com/amiratag/DataShapley)
+
+## Contact
+Thank you for your interest in our work! Please contact us at wxliang@stanford.edu, kl3312@columbia.edu for any questions, comments, or suggestions! 
