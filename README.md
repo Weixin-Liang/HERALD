@@ -54,12 +54,12 @@ conda install pandas
 Please check [shapley/requirements.txt](shapley/requirements.txt) or [shapley/requirements.yml](shapley/requirements.yml) for additional details about the dependencies (You don't need all of them). 
 
 ### BERT-based Dialog Classifier
-Please check [shapley/bert_dialog_classifier.py](shapley/bert_dialog_classifier.py) and [shapley/data_utils.py](shapley/data_utils.py). The code is built upon the github repo [ABSA-PyTorch](https://github.com/songyouwei/ABSA-PyTorch). 
+Please check [shapley/bert_dialog_engagement_classifier.py](shapley/bert_dialog_engagement_classifier.py) and [shapley/data_utils.py](shapley/data_utils.py). The code is built upon the github repo [ABSA-PyTorch](https://github.com/songyouwei/ABSA-PyTorch). 
 Many thanks to the authors and developers!
 
 #### Training
 ```sh
-python train.py --model_name bert_spc
+python bert_dialog_engagement_classifier.py --model_name bert_spc
 ```
 #### Running with Custom Dialog Dataset
 Please check [shapley/convai_data/convai_dataloader.py](shapley/convai_data/convai_dataloader.py) for supporting custom dialog dataset. 
