@@ -1,6 +1,6 @@
 """
 To run the training pipeline of the bert sentence classifier, please run: 
-    CUDA_VISIBLE_DEVICES=3 python bertspc.py
+    CUDA_VISIBLE_DEVICES=0 python bertspc.py
 """
 
 import logging
@@ -44,8 +44,8 @@ class Instructor:
                 self.testset = data_dict['self.testset']
                 self.testdevset = data_dict['self.testdevset']
         else:
-            self.load_gunrock_dataset()
-            # self.load_convai_dataset()
+            # self.load_gunrock_dataset()
+            self.load_convai_dataset()
 
             with open(pkl_path, 'wb') as pkl_file:
                 data_dict = {

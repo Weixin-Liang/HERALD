@@ -1,4 +1,17 @@
 # -*- coding: utf-8 -*-
+
+#######################
+# Apply Data Shapely Methods to assign a value for each training datum
+# And verify that Removing training data with low Shapley
+# value improves the performance of the KNN regressor
+#
+# Beyond User Self-Reported Likert Scale Ratings: A Comparison Model for Automatic Dialog Evaluation (ACL 2020)
+# Weixin Liang, James Zou and Zhou Yu
+# 
+# HERALD: An Annotation Efficient Method to Train User Engagement Predictors in Dialogs (ACL 2021)
+# Weixin Liang, Kai-Hui Liang and Zhou Yu
+#######################
+
 import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.cluster import KMeans
