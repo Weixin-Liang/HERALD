@@ -51,7 +51,7 @@ conda install -c conda-forge scikit-learn
 conda install -c conda-forge transformers
 conda install pandas
 ```
-Please check [shapley/requirements.txt](shapley/requirements.txt) for additional details about the dependencies (You don't need all of them). 
+Please check [shapley/requirements.txt](shapley/requirements.txt) or [shapley/requirements.yml](shapley/requirements.yml) for additional details about the dependencies (You don't need all of them). 
 
 ### BERT-based Dialog Classifier
 Please check [shapley/bert_dialog_classifier.py](shapley/bert_dialog_classifier.py) and [shapley/data_utils.py](shapley/data_utils.py). The code is built upon the github repo [ABSA-PyTorch](https://github.com/songyouwei/ABSA-PyTorch). 
