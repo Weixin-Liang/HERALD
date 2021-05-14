@@ -111,4 +111,4 @@ Weixin Liang, James Zou and Zhou Yu.
 [[Code]](https://github.com/amiratag/DataShapley)
 
 ## Contact
-Thank you for your interest in our work! Please contact us at wxliang@stanford.edu, kl3312@columbia.edu for any questions, comments, or suggestions! 
+Thank you for your interest in our work! Please contact us at kl3312@columbia.edu, wxliang@stanford.edu for any questions, comments, or suggestions! 
