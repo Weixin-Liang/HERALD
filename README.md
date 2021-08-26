@@ -2,7 +2,14 @@
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/Weixin-Liang/HERALD/blob/master/LICENSE)
 
-This repo provides the PyTorch source code of our paper: HERALD: An Annotation Efficient Method to Train User Engagement Predictors in Dialogs (ACL 2021).
+This repo provides the PyTorch source code of our paper: 
+[HERALD: An Annotation Efficient Method to Train User Engagement Predictors in Dialogs](https://aclanthology.org/2021.acl-long.283/) (ACL 2021). 
+[[PDF]](https://arxiv.org/abs/2106.00162)
+[[Video: Prof. Zhou Yu]](https://drive.google.com/file/d/1xjNUrkmSm-eBEQLBR2UXl2YpXkvz54-2/view?usp=sharing)
+
+
+
+
 
 
 ```
