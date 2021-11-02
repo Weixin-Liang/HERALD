@@ -1,6 +1,10 @@
 # HERALD: An Annotation Efficient Method to Train User Engagement Predictors in Dialogs
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/Weixin-Liang/HERALD/blob/master/LICENSE)
+[![arXiv](https://img.shields.io/badge/arXiv-2106.00162-b31b1b.svg)](https://arxiv.org/abs/2106.00162)
+[![Python 3.8](https://img.shields.io/badge/python-3.6-blue.svg)](https://www.python.org/downloads/release/python-380/)
+[![Pytorch](https://img.shields.io/badge/Pytorch-1.8-red.svg)](https://shields.io/)
+
 
 This repo provides the PyTorch source code of our paper: 
 [HERALD: An Annotation Efficient Method to Train User Engagement Predictors in Dialogs](https://aclanthology.org/2021.acl-long.283/) (ACL 2021). 
