@@ -76,7 +76,6 @@ dependencies:
   - ncurses=6.2=he6710b0_1
   - nettle=3.4.1=hbb512f6_0
   - ninja=1.10.2=py36hff7bd54_0
-  - nltk=3.6.1=pyhd3eb1b0_0
   - olefile=0.46=py36_0
   - openh264=2.1.0=hd408876_0
   - openssl=1.1.1k=h7f98852_0
@@ -85,7 +84,6 @@ dependencies:
   - pcre=8.44=he6710b0_0
   - pexpect=4.8.0=py36_0
   - pickleshare=0.7.5=py36_0
-  - pillow=8.1.2=py36he98fc37_0
   - pip=21.0.1=py36h06a4308_0
   - prompt-toolkit=3.0.8=py_0
   - ptyprocess=0.6.0=py36_0
@@ -124,7 +122,6 @@ dependencies:
   - traitlets=4.3.3=py36_0
   - transformers=4.4.2=pyhd8ed1ab_0
   - typing_extensions=3.7.4.3=pyha847dfd_0
-  - urllib3=1.26.4=pyhd8ed1ab_0
   - wcwidth=0.2.5=py_0
   - wheel=0.36.2=pyhd3eb1b0_0
   - xz=5.2.5=h7b6447c_0
